@@ -1,0 +1,64 @@
+// Video Intro
+.video-container {
+    position: relative;
+    height: 100vh;
+
+    .video-intro {
+        object-fit: cover;
+    }
+
+    // Play
+    .info-app-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 6em;
+        z-index: 9;
+
+        span {
+            position: absolute;
+            top: 13px;
+            left: 0;
+            right: 0;
+            z-index: 10;
+        }
+
+        .bi-play-fill {
+            color: #4b6572;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: all 0.2s;
+            padding-left: 5px;
+            z-index: 11;
+            cursor: pointer;
+        }
+
+        .bi-play-fill:hover {
+            color: #fff;
+            background-color: transparent;
+            border-radius: 50%;
+        }
+
+        p {
+            font-size: 30px;
+            color: #fff;
+            text-shadow: 0 0 10px rgb(114 71 21 / 68%), 0 0 10px rgb(114 71 21 / 68%);
+        }
+
+        // Store
+        .info-app-store ul {
+            list-style: none;
+
+            li {  opacity: 0.8; cursor: pointer; }
+            li:hover {opacity: 1;}
+        }
+    }
+}
+
+// News
+.news-container {
+    height: 910px;
+    background: url(../../../assets/image/main-page-home/news.jpg);
+    background-size: cover;
+    background-position: center;
+}
