@@ -1,0 +1,42 @@
+<nav class="col-12 d-flex align-items-center justify-content-end ps-4" [class.header_change]="header_variable">
+    <!-- Music & Brand -->
+    <div class="col-2 d-flex align-items-center">
+        <div class="music" (click)="onPlayAudio()">
+            <img [src]="audioService.audioImg" alt="Music">
+        </div>
+        <div class="brand d-flex justify-content-center w-100">
+            <img src="../../../assets/image/main-navbar/brand.png" alt="Genshin Impact">
+        </div>
+    </div>
+    <!-- Section Title -->
+    <div class="section-title col-6 position-relative d-flex align-items-center h-100">
+        <ul class="d-flex align-items-center mb-0 h-100">
+            <li class="h-100 d-flex align-items-center mx-3" *ngFor="let section of sectionTitle">
+                <span class="active-border-top"></span>
+                <a routerLinkActive="activeTab" [routerLinkActiveOptions]="{exact:
+                    true}" [routerLink]="[section.path]"
+                    [ngClass]="{'dropdown-toggle': section.title === 'Information'}" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">{{section.title}}</a>
+                <ul class="dropdown-menu py-0" aria-labelledby="dropdownMenuButton1" *ngIf="section.title === 'Information'">
+                    <li><a class="dropdown-item w-100 h-100 d-flex align-items-center" href="#">Présentation du jeu</a></li>
+                    <li><a class="dropdown-item w-100 h-100 d-flex align-items-center" href="#">Teyvat</a></li>
+                    <li><a class="dropdown-item w-100 h-100 d-flex align-items-center" href="#">Voyages</a></li>
+                    <li><a class="dropdown-item w-100 h-100 d-flex align-items-center" href="#">Manga</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- Profile -->
+    <div class="col-2 profile d-flex justify-content-end align-items-center me-3">
+        <div class="connexion me-3">
+            <span>Connexion</span>
+        </div>
+        <div class="avatar">
+            <img src="../../../assets/image/main-navbar/avatar.png" alt="Avatar">
+        </div>
+    </div>
+    <!-- Download the Game -->
+    <div class="col-2 download text-center">
+        <img class="w-100 h-100" src="../../../assets/image/main-navbar/donwload.png" alt="Download">
+    </div>
+</nav>

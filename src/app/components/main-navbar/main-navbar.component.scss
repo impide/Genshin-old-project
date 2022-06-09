@@ -1,0 +1,108 @@
+// Navbar Container
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    height: 66px;
+    background-color: rgba(17, 17, 17, 0.75);
+    box-shadow: 0 3px 7px 0 rgb(0 0 0 / 35%);
+}
+
+.header_change {
+    background-color: rgba(17, 17, 17, 0.85);
+}
+
+// Music & Brand
+.music img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+// Section Title
+.section-title ul {
+    list-style: none;
+
+    li {
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .active-border-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 77px;
+        height: 5px;
+        transition: all 0.2s ease-in-out 0s;
+        background-color: rgb(105, 224, 255);
+        margin-left: 2rem;
+    }
+
+    a {
+        color: #ccc;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+        color: #fff;
+    }
+}
+
+.activeTab {
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    color: #fff !important;
+}
+
+// Dropdown
+.section-title ul li:nth-of-type(4):hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 65.5px;
+    border-radius: 0;
+    background-color: rgba(17, 17, 17, 0.85);
+
+    li {
+        width: 214px;
+        height: 63px;
+
+        a {
+            padding-left: 20px;
+            font-size: 15px;
+        }
+        a:hover {
+            background: #343031;
+            text-shadow: none;
+        }
+    }
+}
+
+// Profile
+.profile {
+    cursor: pointer;
+}
+
+.profile .connexion span {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.profile .avatar img {
+    opacity: 0.6;
+}
+
+.profile:hover .connexion span,
+.profile:hover .avatar img {
+    color: #fff;
+    opacity: 1;
+}
+
+// Download the Game
+.download {
+    width: 200px;
+    height: 66px;
+    cursor: pointer;
+}
