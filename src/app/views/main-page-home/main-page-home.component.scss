@@ -49,16 +49,80 @@
         .info-app-store ul {
             list-style: none;
 
-            li {  opacity: 0.8; cursor: pointer; }
-            li:hover {opacity: 1;}
+            li {
+                opacity: 0.8;
+                cursor: pointer;
+            }
+
+            li:hover {
+                opacity: 1;
+            }
         }
     }
 }
 
 // News
 .news-container {
+    position: relative;
     height: 910px;
     background: url(../../../assets/image/main-page-home/news.jpg);
     background-size: cover;
     background-position: center;
+
+    .title {
+        position: relative;
+        padding-top: 11em;
+
+        h1 {
+            font-size: 50px;
+            color: #fff;
+        }
+
+        img {
+            width: 385px;
+            height: 14px;
+        }
+    }
+
+    .title img:nth-of-type(2) {
+        transform: scaleX(-1);
+    }
+
+    .carousel-container {
+        position: relative;
+        border: 1px solid black;
+        height: 400px;
+        padding-left: 8em;
+        padding-right: 8em;
+
+        .carousel {
+            object-fit: cover;
+
+            img {
+                height: 100% !important;
+            }
+        }
+
+        .description {
+            background: rgba(38,18,12,0.62);
+            padding-top: 2em;
+            padding-left: 2em;
+            padding-right: 2em;
+            overflow: hidden;
+
+            h2 {
+                font-size: 18px;
+                color: #ffd49f;
+            }
+
+            ul {
+                list-style: none;
+
+                li a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
 }

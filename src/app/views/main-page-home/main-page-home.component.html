@@ -36,7 +36,64 @@
         <div class="col-12 px-0">
             <!-- News -->
             <div class="news-container w-100">
-
+                <div class="title d-flex align-items-center justify-content-center">
+                    <img src="../../../assets/image/main-page-home/left-line.png" alt="Decor">
+                    <h1 class="mx-4">Actualités</h1>
+                    <img src="../../../assets/image/main-page-home/right-line.png" alt="Decor">
+                </div>
+                <div class="carousel-container col-12 d-flex mt-5">
+                    <!-- Carousel -->
+                    <div class="carousel col-6">
+                        <div id="carouselExampleIndicators" class="carousel slide h-100" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner h-100">
+                                <div class="carousel-item h-100 active">
+                                    <img aria-colcount="w-100" src="../../../assets/image/main-page-home/yaksha.jpg"
+                                        class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img aria-colcount="w-100" src="../../../assets/image/main-page-home/yelan.jpg"
+                                        class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img aria-colcount="w-100" src="../../../assets/image/main-page-home/xiao.jpg"
+                                        class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Description -->
+                    <div class="description col-6">
+                        <h2 class="ps-2">Nouveautés</h2>
+                        <hr class="text-white">
+                        <ul class="p-0">
+                            <li *ngFor="let new of newsUpdate">
+                                <div class="news d-flex justify-content-between">
+                                    <a [href]="new.path">{{ new.title }}</a>
+                                    <span>{{ new.date }}</span>
+                                </div>
+                                <hr class="text-white">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
