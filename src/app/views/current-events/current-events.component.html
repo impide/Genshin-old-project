@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 px-0">
+            <!-- Current Events -->
+            <div class="event-container w-100">
+                <div class="col-12 cards-container d-flex justify-content-center">
+                    <div class="col-3 cards mx-1" *ngFor="let event of events">
+                        <div class="image-events p-3">
+                            <img class="w-100" [src]="event.src" [alt]="event.description">
+                        </div>
+                        <h3 class="text-white px-3">{{event.description}}</h3>
+                        <span class="ps-3">{{event.date}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
