@@ -5,7 +5,7 @@ export const SectionTitle: SectionTitle[] = [
     },
     {
         title: 'Actualités',
-        path: ''
+        path: '/current-events'
     },
     {
         title: 'Personnages',
