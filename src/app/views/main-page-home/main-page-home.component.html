@@ -22,8 +22,8 @@
                     <p class="mt-3">Disponible en téléchargement immédiat sur multiples plateformes</p>
                     <!-- Store -->
                     <div class="info-app-store">
-                        <ul class="d-flex justify-content-center px-0">
-                            <li class="mx-2" *ngFor="let store of stores">
+                        <ul class="d-flex flex-column flex-xl-row justify-content-center px-0">
+                            <li class="mx-2 my-3" *ngFor="let store of stores">
                                 <img [src]="store.src" [alt]="store.title">
                             </li>
                         </ul>
