@@ -9,12 +9,12 @@
             <img src="../../../assets/image/main-navbar/brand.png" alt="Genshin Impact">
         </div>
         <!-- Menu Hamburger -->
-        <div class="dropdown col-1 col-lg-7 col-xl-8 text-center text-lg-end d-xxl-none pe-lg-3">
+        <div class="dropdown position-relative col-1 col-lg-7 col-xl-8 text-center text-lg-end d-xxl-none pe-lg-3">
             <div class="menu-hamburger dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 <i class="bi bi-list"></i>
             </div>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <ul class="dropdown-menu" id="menu-hamburger" aria-labelledby="dropdownMenuButton1">
                 <li *ngFor="let section of sectionTitle"><a class="dropdown-item text-center" href="#">{{ section.title
                         }}</a></li>
                 <li><a class="dropdown-item text-center" href="#">Connexion</a></li>
