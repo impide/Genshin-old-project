@@ -25,12 +25,12 @@
     <!-- Section Title -->
     <div class="section-title col-xxl-6 position-relative d-none d-xxl-flex align-items-center h-100">
         <ul class="d-flex align-items-center mb-0 h-100">
-            <li class="h-100 d-flex align-items-center mx-3" *ngFor="let section of sectionTitle">
-                <span class="active-border-top"></span>
+            <li class="h-100 d-flex mx-3" *ngFor="let section of sectionTitle">
                 <a routerLinkActive="activeTab" [routerLinkActiveOptions]="{exact:
-                    true}" [routerLink]="[section.path]"
+                    true}" [routerLink]="[section.path]" class="pt-3"
                     [ngClass]="{'dropdown-toggle': section.title === 'Information'}" id="dropdownMenuButton2"
-                    data-bs-toggle="dropdown" aria-expanded="false">{{section.title}}</a>
+                    data-bs-toggle="dropdown" aria-expanded="false">{{section.title}}
+                </a>
                 <ul class="dropdown-menu py-0" aria-labelledby="dropdownMenuButton2"
                     *ngIf="section.title === 'Information'">
                     <li><a class="dropdown-item w-100 h-100 d-flex align-items-center" href="#">Présentation du jeu</a>
