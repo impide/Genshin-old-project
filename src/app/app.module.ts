@@ -8,6 +8,7 @@ import { MainNavbarComponent } from './components/main-navbar/main-navbar.compon
 import { MainPageHomeComponent } from './views/main-page-home/main-page-home.component';
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
 import { MainContactComponent } from './components/main-contact/main-contact.component';
+import { CurrentEventsComponent } from './views/current-events/current-events.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MainContactComponent } from './components/main-contact/main-contact.com
     MainNavbarComponent,
     MainPageHomeComponent,
     MainFooterComponent,
-    MainContactComponent
+    MainContactComponent,
+    CurrentEventsComponent
   ],
   imports: [
     BrowserModule,
