@@ -22,10 +22,22 @@
                     <p class="mt-3">Disponible en téléchargement immédiat sur multiples plateformes</p>
                     <!-- Store -->
                     <div class="info-app-store">
-                        <ul class="d-flex flex-column flex-xl-row justify-content-center px-0">
-                            <li class="mx-2 my-3" *ngFor="let store of stores">
+                        <ul class="d-flex justify-content-center px-0">
+                            <li class="mx-2 d-none d-xl-block" *ngFor="let store of stores">
                                 <img [src]="store.src" [alt]="store.title">
                             </li>
+                            <div class="responsive-store d-flex d-xl-none justify-content-between">
+                                <div class="firsts-stores mx-2">
+                                    <li class="my-3" *ngFor="let store of stores.slice(0,2)">
+                                        <img [src]="store.src" [alt]="store.title">
+                                    </li>
+                                </div>
+                                <div class="seconds-store mx-2">
+                                    <li class="my-3" *ngFor="let store of stores.slice(2,4)">
+                                        <img [src]="store.src" [alt]="store.title">
+                                    </li>
+                                </div>
+                            </div>
                         </ul>
                     </div>
                 </div>
@@ -41,9 +53,9 @@
                     <h1 class="mx-4">Actualités</h1>
                     <img src="../../../assets/image/main-page-home/right-line.png" alt="Decor">
                 </div>
-                <div class="carousel-container col-12 d-flex mt-5">
+                <div class="carousel-container col-12 d-flex flex-column flex-xl-row mt-5">
                     <!-- Carousel -->
-                    <div class="carousel col-6">
+                    <div class="carousel col-12 col-xl-6">
                         <div id="carouselExampleIndicators" class="carousel slide h-100" data-bs-ride="carousel">
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -67,20 +79,10 @@
                                         class="d-block w-100" alt="...">
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
                         </div>
                     </div>
                     <!-- Description -->
-                    <div class="description col-6">
+                    <div class="description col-12 col-xl-6">
                         <h2 class="ps-2">Nouveautés</h2>
                         <div class="border-container w-100">
                             <span class="border-active h-100"></span>
@@ -134,7 +136,7 @@
         <div class="col-12 px-0">
             <!-- Social Media -->
             <div class="social-media">
-                <ul class="d-flex align-items-center mb-0 p-0">
+                <ul class="d-flex justify-content-center justify-content-xl-start align-items-center mb-0 p-0 ps-xl-5">
                     <li class="d-flex align-items-center" *ngFor="let social of socialLists">
                         <a><i class="bi {{social.classIcon}} mx-3"></i></a>
                     </li>
@@ -148,7 +150,7 @@
             <div class="genshin-footer">
                 <div class="d-flex align-items-center flex-column">
                     <img class="brand mt-5 mb-4" src="../../../assets/image/main-navbar/brand.png" alt="Genshin Impact">
-                    <ul class="d-flex align-items-center mb-0 p-0">
+                    <ul class="d-flex flex-column flex-md-row align-items-center mb-0 p-0">
                         <li class="mx-3" *ngFor="let info of legalNotice">
                             <a [href]="info.path">{{info.title}}</a>
                         </li>
