@@ -1,24 +1,40 @@
-<nav class="col-12 d-flex align-items-center justify-content-end ps-4" [class.header_change]="header_variable">
+<nav class="col-12 d-flex align-items-center justify-content-center justify-content-lg-end ps-xl-4"
+    [class.header_change]="header_variable">
     <!-- Music & Brand -->
-    <div class="col-2 d-flex align-items-center">
-        <div class="music" (click)="onPlayAudio()">
+    <div class="col-12 col-lg-10 col-xxl-2 d-flex align-items-center">
+        <div class="col-1 col-lg-2 col-xxl-1 col-xl-1 music text-center" (click)="onPlayAudio()">
             <img [src]="audioService.audioImg" alt="Music">
         </div>
-        <div class="brand d-flex justify-content-center w-100">
+        <div class="col-10 col-lg-3 col-xxl-11 brand d-flex justify-content-center">
             <img src="../../../assets/image/main-navbar/brand.png" alt="Genshin Impact">
+        </div>
+        <!-- Menu Hamburger -->
+        <div class="dropdown col-1 col-lg-7 col-xl-8 text-center text-lg-end d-xxl-none pe-lg-3">
+            <div class="menu-hamburger dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </div>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li *ngFor="let section of sectionTitle"><a class="dropdown-item text-center" href="#">{{ section.title
+                        }}</a></li>
+                <li><a class="dropdown-item text-center" href="#">Connexion</a></li>
+                <li><a class="dropdown-item text-center" href="#">Télécharger</a></li>
+            </ul>
         </div>
     </div>
     <!-- Section Title -->
-    <div class="section-title col-6 position-relative d-flex align-items-center h-100">
+    <div class="section-title col-xxl-6 position-relative d-none d-xxl-flex align-items-center h-100">
         <ul class="d-flex align-items-center mb-0 h-100">
             <li class="h-100 d-flex align-items-center mx-3" *ngFor="let section of sectionTitle">
                 <span class="active-border-top"></span>
                 <a routerLinkActive="activeTab" [routerLinkActiveOptions]="{exact:
                     true}" [routerLink]="[section.path]"
-                    [ngClass]="{'dropdown-toggle': section.title === 'Information'}" id="dropdownMenuButton1"
+                    [ngClass]="{'dropdown-toggle': section.title === 'Information'}" id="dropdownMenuButton2"
                     data-bs-toggle="dropdown" aria-expanded="false">{{section.title}}</a>
-                <ul class="dropdown-menu py-0" aria-labelledby="dropdownMenuButton1" *ngIf="section.title === 'Information'">
-                    <li><a class="dropdown-item w-100 h-100 d-flex align-items-center" href="#">Présentation du jeu</a></li>
+                <ul class="dropdown-menu py-0" aria-labelledby="dropdownMenuButton2"
+                    *ngIf="section.title === 'Information'">
+                    <li><a class="dropdown-item w-100 h-100 d-flex align-items-center" href="#">Présentation du jeu</a>
+                    </li>
                     <li><a class="dropdown-item w-100 h-100 d-flex align-items-center" href="#">Teyvat</a></li>
                     <li><a class="dropdown-item w-100 h-100 d-flex align-items-center" href="#">Voyages</a></li>
                     <li><a class="dropdown-item w-100 h-100 d-flex align-items-center" href="#">Manga</a></li>
@@ -27,7 +43,7 @@
         </ul>
     </div>
     <!-- Profile -->
-    <div class="col-2 profile d-flex justify-content-end align-items-center me-3">
+    <div class="col-xxl-2 profile d-none d-xxl-flex justify-content-end align-items-center me-3">
         <div class="connexion me-3">
             <span>Connexion</span>
         </div>
@@ -36,7 +52,7 @@
         </div>
     </div>
     <!-- Download the Game -->
-    <div class="col-2 download text-center">
+    <div class="col-lg-2 d-none d-lg-block download text-center">
         <img class="w-100 h-100" src="../../../assets/image/main-navbar/donwload.png" alt="Download">
     </div>
 </nav>

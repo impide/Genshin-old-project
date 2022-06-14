@@ -106,3 +106,28 @@ nav {
     height: 66px;
     cursor: pointer;
 }
+
+// Menu Hamburger
+.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-menu {
+    top: 15.5px !important;
+    border-radius: 0;
+    background-color: rgba(17, 17, 17, 0.85);
+
+    li a {
+        color: #fff;
+    }
+
+    li a:hover {
+            background: #343031;
+            text-shadow: none;
+    }
+}
+.bi-list {
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
