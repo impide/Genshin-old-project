@@ -1,1 +1,9 @@
-<p>main-contact works!</p>
+<!-- Sidebar Social -->
+<ul class="p-0">
+    <li *ngFor="let social of socialLists">
+        <a href="#" class="d-flex align-items-center justify-content-between py-1 px-4">
+            <i class="bi {{social.classIcon}} me-3"></i>
+            <span>{{ social.iconName }}</span>
+        </a>
+    </li>
+</ul>
