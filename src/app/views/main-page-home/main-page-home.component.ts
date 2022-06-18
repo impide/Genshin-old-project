@@ -1,9 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { AppStore } from 'src/app/core/data/app-store';
-import { LegalNotice } from 'src/app/core/data/legal-notice';
 import { LocationsDesign } from 'src/app/core/data/location-design';
 import { NewsUpdate } from 'src/app/core/data/new-update';
-import { SocialLists } from 'src/app/core/data/social-media';
 
 @Component({
   selector: 'app-main-page-home',
@@ -20,14 +18,26 @@ export class MainPageHomeComponent implements OnInit {
   // Location Design
   locationsDesign: LocationsDesign[] = LocationsDesign;
 
-  // Social Media
-  socialLists: SocialLists[] = SocialLists;
-
-  // Information Legal
-  legalNotice: LegalNotice[] = LegalNotice;
+  // Sidebar Social
+  onShowContactPanel: boolean = true;
+  sidebar_variable: boolean = false;
   
   constructor() {}
 
   ngOnInit(): void {}
+
+  onShow(): void {
+    this.onShowContactPanel = !this.onShowContactPanel;
+  }
+
+    // Background Navbar
+    @HostListener("document:scroll")
+    scrollfunction(){
+      if(document.body.scrollTop > 450 || document.documentElement.scrollTop > 450){
+        this.sidebar_variable = true;
+      } else {
+        this.sidebar_variable = false;
+      }
+    }
 }
 
