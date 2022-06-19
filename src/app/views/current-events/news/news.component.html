@@ -1,0 +1,8 @@
+<li class="eventCard d-flex" *ngFor="let contest of (contestEvents$|async)">
+    <div class="container-image">
+        <img [src]="contest.src" alt="Contest">
+    </div>
+    <div class="container-description">
+        <h3>{{contest.description}}</h3>
+    </div>
+</li>

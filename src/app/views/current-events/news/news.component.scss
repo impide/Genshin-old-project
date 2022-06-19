@@ -1,0 +1,26 @@
+li.eventCard {
+    position: relative;
+    min-height: 170px;
+    background-color: #fafafa;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+
+    .container-image {
+        width: 265px;
+        height: 140px;
+        margin-right: 20px;
+
+        img {
+            width: 265px;
+            height: 140px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+    }
+
+    .container-description h3 {
+        font-size: 24px;
+        font-weight: 400;
+    }
+}
