@@ -5,11 +5,11 @@ export const SectionTitle: SectionTitle[] = [
     },
     {
         title: 'Actualités',
-        path: '/current-events'
+        path: '/current-events/news'
     },
     {
         title: 'Personnages',
-        path: ''
+        path: '/characters'
     },
     {
         title: 'Information',
