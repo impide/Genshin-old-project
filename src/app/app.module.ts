@@ -9,6 +9,15 @@ import { MainPageHomeComponent } from './views/main-page-home/main-page-home.com
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
 import { MainContactComponent } from './components/main-contact/main-contact.component';
 import { CurrentEventsComponent } from './views/current-events/current-events.component';
+import { NewsComponent } from './views/current-events/news/news.component';
+import { SpotlightComponent } from './views/current-events/spotlight/spotlight.component';
+import { AnnouncementsComponent } from './views/current-events/announcements/announcements.component';
+import { EventsComponent } from './views/current-events/events/events.component';
+import { CharactersComponent } from './views/characters/characters.component';
+import { MondstadtComponent } from './views/characters/mondstadt/mondstadt.component';
+import { LiyueComponent } from './views/characters/liyue/liyue.component';
+import { InazumaComponent } from './views/characters/inazuma/inazuma.component';
+import { ComingSoonComponent } from './views/characters/coming-soon/coming-soon.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +26,16 @@ import { CurrentEventsComponent } from './views/current-events/current-events.co
     MainPageHomeComponent,
     MainFooterComponent,
     MainContactComponent,
-    CurrentEventsComponent
+    CurrentEventsComponent,
+    NewsComponent,
+    SpotlightComponent,
+    AnnouncementsComponent,
+    EventsComponent,
+    CharactersComponent,
+    MondstadtComponent,
+    LiyueComponent,
+    InazumaComponent,
+    ComingSoonComponent
   ],
   imports: [
     BrowserModule,
