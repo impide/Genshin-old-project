@@ -13,6 +13,22 @@
                     </div>
                 </div>
             </div>
+            <!-- Contest & Events -->
+            <div class="contest-and-event">
+                <div class="section">
+                    <ul class="d-flex px-0">
+                        <li *ngFor="let section of sectionsTitle"><button class="btn text-center"
+                            [ngClass]="{'active': router.url.includes(section.path)}">{{ section.title }}</button></li>
+                    </ul>
+                </div>
+                <ul class="p-0">
+                    <router-outlet></router-outlet>
+                </ul>
+                <!-- Show More -->
+                <div class="show-more">
+                    <button class="w-100 btn text-white" (click)="onShowMoreEvents()">Afficher plus</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

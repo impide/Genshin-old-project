@@ -42,3 +42,44 @@
         }
     }
 }
+
+// Contests & Events
+.contest-and-event {
+    padding: 6em;
+    background-color: #f0f0f0;
+
+    .section {
+        ul {
+            list-style: none;
+
+            button {
+                width: 150px;
+                color: #393b40;
+                background-color: rgba(57,59,64,0.18);
+            }
+            button.active,
+            button:hover {
+                width: 150px;
+                color: #f4d8a8;
+                background-color: #393b40;
+            }
+        }
+    }
+
+    .section ul li button:not(:nth-of-type(4)) {
+        margin-right: 1rem;
+    }
+
+    ul {list-style: none;}
+}
+
+// Show More
+.show-more {
+    button {
+        background-color: #393b40;
+    }
+
+    button:hover {
+        background-color: #565961;
+    }
+}
