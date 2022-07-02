@@ -9,7 +9,7 @@ export const SectionTitle: SectionTitle[] = [
     },
     {
         title: 'Personnages',
-        path: '/characters'
+        path: '/characters/mondstadt'
     },
     {
         title: 'Information',
