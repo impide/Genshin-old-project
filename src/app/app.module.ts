@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+import { AppComponent } from './app.component';
 import { MainNavbarComponent } from './components/main-navbar/main-navbar.component';
 import { MainPageHomeComponent } from './views/main-page-home/main-page-home.component';
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
@@ -18,6 +23,9 @@ import { MondstadtComponent } from './views/characters/mondstadt/mondstadt.compo
 import { LiyueComponent } from './views/characters/liyue/liyue.component';
 import { InazumaComponent } from './views/characters/inazuma/inazuma.component';
 import { ComingSoonComponent } from './views/characters/coming-soon/coming-soon.component';
+import { MainRegisterComponent } from './components/main-register/main-register.component';
+import { SignupComponent } from './components/main-register/signup/signup.component';
+import { LoginComponent } from './components/main-register/login/login.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +43,20 @@ import { ComingSoonComponent } from './views/characters/coming-soon/coming-soon.
     MondstadtComponent,
     LiyueComponent,
     InazumaComponent,
-    ComingSoonComponent
+    ComingSoonComponent,
+    MainRegisterComponent,
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatCheckboxModule,
+    HttpClientModule,
+    FormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
