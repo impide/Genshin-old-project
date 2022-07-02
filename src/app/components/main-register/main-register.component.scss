@@ -1,0 +1,97 @@
+// Login
+// Close
+.close i {
+    font-size: 22px;
+    color: rgb(167, 167, 167);
+    cursor: pointer;
+}
+
+// Title
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+// Form
+.input-container {
+    position: relative;
+    border-radius: 4px;
+
+    input {
+        position: relative;
+        padding-left: 20px;
+        font-size: 16px;
+        line-height: 26px;
+        border: 0;
+        padding: 10px 12px;
+        outline: none;
+        border: 1px solid #ebebeb;
+        background: #e8f0fe;
+    }
+
+    input:disabled {
+        background: #8e8e8e;
+        cursor: not-allowed;
+    }
+}
+
+// Submit
+button {
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    border-color: #3b4354;
+    background-color: #3b4354;
+    cursor: pointer;
+}
+
+// Options
+.options {
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #7f858a;
+    }
+}
+
+// Social Info
+.social-info {
+    p {
+        color: #c0c5c8;
+        font-size: 14px;
+    }
+
+    .social-lists ul {
+        list-style: none;
+
+        li a {
+            text-decoration: none;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+// Signup
+.cgu {
+    span {
+        color: #aaaaaa;
+        font-size: 12px;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #7f858a;
+        font-size: 12px;
+    }
+}
+
+.to-Login a {
+    text-decoration: none;
+    color: #7f858a;
+    cursor: input-container;
+}
