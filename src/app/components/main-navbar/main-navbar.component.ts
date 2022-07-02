@@ -1,6 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { SectionTitle } from 'src/app/core/data/navbar-section-title';
 import { AudioService } from 'src/app/core/service/audio.service';
+import { MainRegisterComponent } from '../main-register/main-register.component';
 
 @Component({
   selector: 'app-main-navbar',
@@ -25,8 +27,16 @@ export class MainNavbarComponent implements OnInit {
   }
 
   constructor(
-    public audioService: AudioService
+    public audioService: AudioService,
+    public dialog: MatDialog
   ) { }
+
+  openDialog() {
+    this.dialog.open(MainRegisterComponent, {
+      panelClass: ['col-4'],
+      disableClose: true
+    });
+  }
 
   ngOnInit(): void {
     this.audioService.audioData();
