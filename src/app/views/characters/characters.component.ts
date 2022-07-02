@@ -9,26 +9,29 @@ export class CharactersComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   locationTeyvat: LocationTeyvat[] = [
     {
-      locationName: 'Mondstadt'
+      locationName: 'Mondstadt',
+      locationPath: '/characters/mondstadt'
     },
     {
-      locationName: 'Liyue'
+      locationName: 'Liyue',
+      locationPath: '/characters/liyue'
     },
     {
-      locationName: 'Inazuma'
+      locationName: 'Inazuma',
+      locationPath: '/characters/inazuma'
     },
     {
-      locationName: 'Bientôt disponible'
+      locationName: 'Bientôt disponible',
+      locationPath: '/characters/coming-soon'
     },
-  ]
-
+  ];
 }
 
 export interface LocationTeyvat {
   locationName: string;
+  locationPath: string;
 }

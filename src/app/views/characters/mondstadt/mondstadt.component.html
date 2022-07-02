@@ -1,0 +1,45 @@
+<ng-container *ngFor="let char of (characters$|async); let i = index">
+    <div *ngIf="(selectedChar$|async) === i">
+        <!-- Character -->
+        <div class="character">
+            <img [src]="(charImage$|async)" alt="Characters"
+                [ngClass]="{'animation-on': (selectedChar$|async) === i, 'animation-off': false}">
+        </div>
+        <!-- Character Content -->
+        <div class="character-content">
+            <img [src]="char.charImageName" [alt]="char.charName">
+            <div class="character-cv d-flex">
+                <div class="character-cv-name">
+                    <p>{{char.voiceName}}</p>
+                </div>
+                <div class="character-voice"></div>
+            </div>
+            <div class="character-intro pe-3">
+                <p>{{ char.charIntro }}</p>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<!-- Character Lists -->
+<div class="character-lists d-flex justify-content-between align-items-center">
+    <div class="prev position-relative" (click)="onDirectionChar('prev')">
+        <img src="../../../assets/image/characters/prev.png" alt="Previous">
+    </div>
+    <div class="lists-container">
+        <ul class="d-flex p-0" #character_lists>
+            <li *ngFor="let char of (characters$|async); let i = index"
+                (click)="onSelectChar(char.charIndex, char.charImage)">
+                <div class="card"
+                    [ngClass]="{'bg-white text-dark': (selectedChar$|async) === i, 'text-white': (selectedChar$|async) !== i}">
+                    <img class="w-100" [src]="char.charAvatar" alt="Character">
+                    <p class="d-flex justify-content-center align-items-center h-100 mb-0">
+                        {{char.charName}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="next position-relative" (click)="onDirectionChar('next')">
+        <img src="../../../assets/image/characters/next.png" alt="Next">
+    </div>
+</div>

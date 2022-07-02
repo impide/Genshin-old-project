@@ -7,41 +7,17 @@
                 <div class="characters-background w-100 h-100"></div>
                 <!-- Background Layer -->
                 <div class="background-layer w-100 h-100"></div>
-                <!-- Character -->
-                <div class="character">
-                    <img src="../../../assets/image/characters/character-jean.png" alt="Jean">
-                </div>
                 <!-- Sidebar Character -->
                 <div class="sidebar-character">
                     <ul class="d-flex flex-column p-0">
-                        <li class="w-100 d-flex align-items-center" *ngFor="let location of locationTeyvat">
-                            <a href="#">{{location.locationName}}</a>
+                        <li class="w-100 d-flex align-items-center" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                            true}" *ngFor="let location of locationTeyvat">
+                            <a [routerLink]="[location.locationPath]">{{location.locationName}}</a>
                         </li>
                     </ul>
                 </div>
-                <!-- Character Content -->
-                <div class="character-content">
-                    <img src="../../../assets/image/characters/jean.png" alt="Jean">
-                    <div class="character-cv d-flex">
-                        <div class="character-cv-name">
-                            <p>CV : Chiwa Saito</p>
-                        </div>
-                        <div class="character-voice"></div>
-                    </div>
-                    <div class="character-intro pe-3">
-                        <p>Entièrement dévouée à sa fonction de grande maîtresse intérimaire de l'Ordre de Favonius,
-                            Jean veille sans relâche sur Mondstadt. Bien qu'elle n'était pas la plus douée de ses pairs,
-                            cette jeune femme est devenue le pilier de l'Ordre grâce à son travail acharné.<br />
-                            Elle protègera Mondstadt coûte que coûte face à toutes les menaces, notamment celle que
-                            représente Stormterror.</p>
-                    </div>
-                </div>
-                <!-- Character Lists -->
-                <div class="character-lists">
-                    <ul class="d-flex p-0">
-                        <li *ngFor="let char of characters"></li>
-                    </ul>
-                </div>
+                <!-- Location -->
+                <router-outlet></router-outlet>
             </div>
         </div>
     </div>
