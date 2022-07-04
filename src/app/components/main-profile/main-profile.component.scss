@@ -1,0 +1,83 @@
+// Profile Container
+.profile-container {
+    min-height: 100vh;
+    overflow: hidden;
+    background: url(../../../assets/image/main-profile/background-profile.png);
+    background-size: cover;
+    background-position: center;
+
+    .header-profile {
+        height: 600px;
+        overflow: hidden;
+
+        .avatar-container {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 50%;
+            z-index: 999;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+                border-radius: 50%;
+            }
+        }
+
+        .border-profile {
+            width: 360px;
+            height: 360px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 50%;
+            background: linear-gradient(180deg, #F83A3A 0%, #FF7B7B 100%);
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    // Cards
+    .card-extern {
+        width: 355px;
+        height: 500px;
+        border: 2px solid red;
+        border-radius: 15px;
+        cursor: pointer;
+
+        .card-medium {
+            width: 340px;
+            height: 480px;
+            background: linear-gradient(180deg, #F83A3A 0%, #FF7B7B 100%);
+            border-radius: 10px;
+            border: 6px solid #fff;
+            border-radius: 15px;
+
+            .card-intern {
+                position: relative;
+                top: -6px;
+                left: -6px;
+                width: 340px;
+                height: 480px;
+                border: 6px solid #fff;
+                border-radius: 100px;
+
+                .card-image {
+                    position: relative;
+                    width: 328px;
+                    height: 468px;
+                    background: url(https://preview.redd.it/rvlbjs91u9271.jpg?width=640&crop=smart&auto=webp&s=8c9a49f7902f5f12ad0a3ab1c5b2c23592f07d44) no-repeat center;
+                    background-size: cover;
+                    border-radius: 94px;
+                }
+            }
+        }
+    }
+}

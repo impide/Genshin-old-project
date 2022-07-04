@@ -1,0 +1,31 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-main-profile',
+  templateUrl: './main-profile.component.html',
+  styleUrls: ['./main-profile.component.scss']
+})
+export class MainProfileComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  posts: PostModel[] = [
+    {
+      id: 1
+    },
+    {
+      id: 2
+    },
+    {
+      id: 3
+    }
+  ]
+
+}
+
+export interface PostModel {
+  id: number;
+}
