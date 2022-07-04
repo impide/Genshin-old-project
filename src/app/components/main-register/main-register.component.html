@@ -8,17 +8,19 @@
         <!-- Title -->
         <h3 class="my-3 text-center">Connexion</h3>
         <!-- Form -->
-        <form>
+        <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
             <!-- E-mail -->
             <div class="input-container mb-3">
-                <input class="w-100" type="text" placeholder="Identifiant/Addresse e-mail">
+                <input class="form-control" type="email" name="email" autofocus="none" autocomplete="off"
+                    placeholder="Identifiant/Addresse e-mail" ngModel required email #email="ngModel">
             </div>
             <!-- Password -->
             <div class="input-container mb-3">
-                <input class="w-100" type="text" placeholder="Mot de passe">
+                <input class="form-control" type="password" name="password" placeholder="Mot de passe"
+                ngModel password #password="ngModel" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
             </div>
             <!-- Submit -->
-            <button type="button" class="btn text-center w-100">Connexion</button>
+            <button type="submit" class="btn text-center w-100">Connexion</button>
         </form>
         <!-- Options -->
         <div class="options d-flex justify-content-between mt-3">
@@ -77,22 +79,22 @@
             </div>
             <!-- Confirm Password -->
             <div class="confirm-password input-container mb-3">
-                <input class="form-control" type="password" name="confirmPassword" required 
-                placeholder="Confirmation du mot de passe" ngModel confirmPassword #confirmPassword="ngModel"
-                required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-                 <!-- Error -->
-            <span *ngIf="confirmPassword.errors?.['required'] && confirmPassword.touched" class="text-danger">Please
-                confirm
-                your password</span>
-            <span *ngIf="confirmPassword.touched && confirmPassword.value !== password.value"
-                class="text-danger">Password are not the same</span>
+                <input class="form-control" type="password" name="confirmPassword" required
+                    placeholder="Confirmation du mot de passe" ngModel confirmPassword #confirmPassword="ngModel"
+                    required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <!-- Error -->
+                <span *ngIf="confirmPassword.errors?.['required'] && confirmPassword.touched" class="text-danger">Please
+                    confirm
+                    your password</span>
+                <span *ngIf="confirmPassword.touched && confirmPassword.value !== password.value"
+                    class="text-danger">Password are not the same</span>
             </div>
             <!-- CGU -->
             <div class="cgu mb-4 d-flex align-items-baseline">
-                <mat-checkbox class="example-margin me-2" [(ngModel)]="checked" name="termOfUse"
-                aria-required="true" ngModel termOfUse #termOfUse="ngModel"></mat-checkbox>
+                <mat-checkbox class="example-margin me-2" [(ngModel)]="checked" name="termOfUse" aria-required="true"
+                    ngModel termOfUse #termOfUse="ngModel"></mat-checkbox>
                 <span>J'ai lu et j'accepte <a href="#">ACCORD UTILISATEUR</a> & <a href="#">POLITIQUE DE
-                CONFIDENTIALITÉ</a></span>
+                        CONFIDENTIALITÉ</a></span>
             </div>
             <!-- Submit -->
             <button type="submit" class="btn text-center w-100">S'inscrire</button>

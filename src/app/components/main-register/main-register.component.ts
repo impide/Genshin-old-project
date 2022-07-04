@@ -32,6 +32,12 @@ export class MainRegisterComponent implements OnInit {
     return this.currentPath = newPath;
   }
 
+  onLogin(form: NgForm) {
+    const email = form.value.email;
+    const password = form.value.password;
+    this.authService.login(email, password);
+  }
+
   onSignup(form: NgForm) {
     // Managing Errors
     if (form.value.termOfUse === false) {
