@@ -1,7 +1,10 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Observable } from 'rxjs';
 import { SectionTitle } from 'src/app/core/data/navbar-section-title';
+import { UserModel } from 'src/app/core/model/user.model';
 import { AudioService } from 'src/app/core/service/audio.service';
+import { AuthService } from 'src/app/core/service/auth.service';
 import { MainRegisterComponent } from '../main-register/main-register.component';
 
 @Component({
@@ -10,6 +13,10 @@ import { MainRegisterComponent } from '../main-register/main-register.component'
   styleUrls: ['./main-navbar.component.scss']
 })
 export class MainNavbarComponent implements OnInit {
+  // Authentification
+  isAuth$: Observable<boolean> = this.authService.isAuth$;
+  userId$: Observable<UserModel> = this.authService.currentUserData$;
+
   // Title
   sectionTitle: SectionTitle[] = SectionTitle;
 
@@ -28,10 +35,14 @@ export class MainNavbarComponent implements OnInit {
 
   constructor(
     public audioService: AudioService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private authService: AuthService
   ) { }
 
   openDialog() {
+    if (this.authService.isAuth$.value === true) {
+      return;
+    }
     this.dialog.open(MainRegisterComponent, {
       panelClass: ['col-4'],
       disableClose: true
@@ -40,10 +51,24 @@ export class MainNavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.audioService.audioData();
+    this.abbvrEmail();
+  }
+
+  abbvrEmail(): string {
+    if (this.authService.isAuth$.value === true) {
+      const email = this.authService.getCurrentEmail();
+      return email.slice(0,2) + '****' + email.slice(-3);
+    } else {
+      return "Connexion";
+    }
   }
 
   // Play or Mute
   onPlayAudio(): void {
     this.audioService.audioPlay();
+  }
+
+  onLogout(): void {
+    this.authService.logout();
   }
 }

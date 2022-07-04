@@ -23,11 +23,11 @@
         </div>
     </div>
     <!-- Section Title -->
-    <div class="section-title col-xxl-6 position-relative d-none d-xxl-flex align-items-center h-100">
+    <div class="section-title col-xxl-7 position-relative d-none d-xxl-flex align-items-center h-100">
         <ul class="d-flex align-items-center mb-0 h-100">
-            <li class="h-100 d-flex mx-3" *ngFor="let section of sectionTitle">
+            <li class="h-100 d-flex align-items-center mx-3" *ngFor="let section of sectionTitle">
                 <a routerLinkActive="activeTab" [routerLinkActiveOptions]="{exact:
-                    true}" [routerLink]="[section.path]" class="pt-3"
+                    true}" [routerLink]="[section.path]"
                     [ngClass]="{'dropdown-toggle': section.title === 'Information'}" id="dropdownMenuButton2"
                     data-bs-toggle="dropdown" aria-expanded="false">{{section.title}}
                 </a>
@@ -43,9 +43,18 @@
         </ul>
     </div>
     <!-- Profile -->
-    <div class="col-xxl-2 profile d-none d-xxl-flex justify-content-end align-items-center me-3" (click)="openDialog()">
-        <div class="connexion me-3">
-            <span>Connexion</span>
+    <div class="position-relative h-100 col-xxl-1 profile d-none d-xxl-flex justify-content-end align-items-center me-3"
+        (click)="openDialog()">
+        <div class="connexion me-3" *ngIf="!(isAuth$|async)">
+            <span>{{ abbvrEmail() }}</span>
+        </div>
+        <div class="connexion connexion-in me-3" *ngIf="(isAuth$|async)">
+            <span>{{ abbvrEmail() }}</span>
+            <div class="login_dropdown_menu">
+                <a [routerLink]="['/main-profile/', (userId$|async)._id]" target="_blank">Mon compte</a>
+                <span class="mx-3">|</span>
+                <a href="#" (click)="onLogout()">Quitter</a>
+            </div>
         </div>
         <div class="avatar">
             <img src="../../../assets/image/main-navbar/avatar.png" alt="Avatar">
