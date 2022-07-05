@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { SectionTitle } from 'src/app/core/data/navbar-section-title';
 import { UserModel } from 'src/app/core/model/user.model';
@@ -36,6 +37,7 @@ export class MainNavbarComponent implements OnInit {
   constructor(
     public audioService: AudioService,
     public dialog: MatDialog,
+    public router: Router,
     private authService: AuthService
   ) { }
 
@@ -70,5 +72,9 @@ export class MainNavbarComponent implements OnInit {
 
   onLogout(): void {
     this.authService.logout();
+  }
+
+  toDownload(): void {
+    this.router.navigate(['/main-page-download']);
   }
 }
