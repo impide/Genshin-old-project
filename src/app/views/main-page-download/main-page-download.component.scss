@@ -1,0 +1,131 @@
+.container-download {
+    height: 100vh;
+    background: url(../../../assets/image/main-page-download/background-download.png);
+    background-size: cover;
+    z-index: 9;
+
+    .layer-container {
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        height: 245px;
+        transform: translate(-50%, 0);
+        background: url(../../../assets/image/main-page-download/download-layer.png);
+        z-index: 10;
+    }
+}
+
+// Container FAQ
+.container-faq {
+    height: 1820px;
+    background: url(../../../assets/image/main-page-download/second_background_download.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 20px;
+    padding-bottom: 223px;
+
+    h2.faq {
+        height: 324px;
+        line-height: 345px;
+        background: url(../../../assets/image/main-page-download/faq.png) top center no-repeat;
+        font-size: 60px;
+        font-weight: bold;
+        color: #7c77b8;
+    }
+
+    .container-question {
+        background: url(../../../assets/image/main-page-download/faq_layer.png);
+        background-size: cover;
+        background-position: center;
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 20px;
+            line-height: 1.4;
+            font-weight: 400;
+            color: rgba(25, 58, 91, 0.75);
+            transition: color 0.3s;
+        }
+    }
+
+    .container-question ul li a::before {
+        content: '';
+        position: absolute;
+        left: -18px;
+        top: 4px;
+        width: 0;
+        transition: all 0.3s;
+        border-left: 9px solid rgba(25, 58, 91, 0.75);
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;
+    }
+
+    .more-informations {
+        font-size: 20px;
+        font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+        font-weight: 400;
+        color: rgba(25, 58, 91, 0.6);
+        letter-spacing: 2px;
+
+        a {
+            cursor: pointer;
+        }
+    }
+}
+
+// Container Config
+h2.config {
+    height: 324px;
+    line-height: 345px;
+    background: url(../../../assets/image/main-page-download/faq.png) top center no-repeat;
+    font-size: 60px;
+    font-weight: bold;
+    color: #7c77b8;
+}
+
+.devices {
+    ul.system {
+        list-style: none;
+
+        li {
+            position: relative;
+            width: 200px;
+            text-align: center;
+            color: #8498c4;
+            font-weight: bolder;
+            font-size: 30px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .activeSystem {
+            color: #193a5b;
+        }
+        
+        .activeSystem::after {
+            bottom: -21px;
+            height: 4px;
+            background: #193a5b;
+        }
+    }
+}
+
+.devices ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #8498c4;
+    transition: all 0.3s;
+}

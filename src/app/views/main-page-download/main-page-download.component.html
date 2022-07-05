@@ -1,0 +1,117 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="container-download w-100">
+                <div class="layer-container w-100 d-flex justify-content-center align-items-center">
+                    <!-- Platforms -->
+                    <div class="platforms d-flex">
+                        <div class="qr_code">
+                            <img src="../../../assets/image/main-page-download/qr_code.png" alt="QR Code">
+                        </div>
+                        <div class="console d-flex flex-column">
+                            <div class="d-flex mx-3">
+                                <img class="me-3" src="../../../assets/image/main-page-download/ps4.png" alt="PS4">
+                                <img src="../../../assets/image/main-page-download/widows.png" alt="Windows">
+                            </div>
+                            <div class="d-flex mx-3 mt-auto">
+                                <img class="me-3" src="../../../assets/image/main-page-download/app_store.png"
+                                    alt="App Store">
+                                <img src="../../../assets/image/main-page-download/google_play.png" alt="Google Play">
+                            </div>
+                        </div>
+                        <div class="epic-game mt-auto">
+                            <img src="../../../assets/image/main-page-download/epic_game.png" alt="Epic Games">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ -->
+            <div class="container-faq w-100">
+                <h2 class="faq text-center">FAQ</h2>
+                <div class="container-question col-12 d-flex justify-content-evenly">
+                    <div class="col-3">
+                        <ul class="px-0">
+                            <li class="my-5 position-relative" *ngFor="let question of first_part">
+                                <a [href]="question.path">{{ question.question }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <ul class="px-0">
+                            <li class="my-5 position-relative" *ngFor="let question of second_part">
+                                <a [href]="question.path">{{ question.question }}</a>
+                            </li>
+                            <div class="more-informations">
+                                <a class="text-end">Plus d'informations ></a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Config -->
+                <div class="container-config w-100">
+                    <h2 class="config text-center">Configuration requise</h2>
+                    <div class="devices">
+                        <ul class="system px-0 d-flex justify-content-center">
+                            <li (click)="onShowConfig('Windows')" [ngClass]="{'activeSystem': selectedSystem === 'Windows'}">Windows</li>
+                            <li (click)="onShowConfig('Android')" [ngClass]="{'activeSystem': selectedSystem === 'Android'}">Android</li>
+                            <li (click)="onShowConfig('iOS')" [ngClass]="{'activeSystem': selectedSystem === 'iOS'}">iOS</li>
+                        </ul>
+                        <div class="descriptions col-8 mx-auto mt-5">
+                            <!-- Windows-->
+                            <ul class="system-active px-0" *ngIf="selectedSystem === 'Windows'">
+                                <li><strong>Configuration minimal</strong></li>
+                                <p>Système d'exploitation : Windows 7 SP1 64 bits, Windows 8.1 64 bits ou Windows 10 64
+                                    bits<br />
+                                    Processeur : Intel Core i5 ou équivalent<br />
+                                    RAM : 8 Go<br />
+                                    Carte graphique : NVIDIA® GeForce® GT 1030 ou supérieure<br />
+                                    Version DirectX : DirectX 11<br />
+                                    Espace de stockage : au moins 40 Go d'espace libre</p>
+                                <li><strong>Configuration recommandée</strong></li>
+                                <p>Système d'exploitation : Windows 7 SP1 64 bits ou Windows 8.1 64 bits ou Windows 10
+                                    64 bits<br />
+                                    Processeur : Intel Core i7 ou équivalent<br />
+                                    RAM : 16 Go<br />
+                                    Carte graphique : NVIDIA® GeForce® GTX 1060 6 Go ou supérieure<br />
+                                    Version DirectX : DirectX 11<br />
+                                    Espace de stockage : au moins 40 Go d'espace libre<br />
+                                    Si votre PC ne respecte pas la configuration ci-dessus, il vous sera impossible
+                                    d'installer ou d'exécuter le jeu. Votre écran peut également se figer ou devenir
+                                    noir.</p>
+                            </ul>
+                            <!-- Android-->
+                            <ul class="system-active px-0" *ngIf="selectedSystem === 'Android'">
+                                <li><strong>Configuration compatible</strong></li>
+                                <p>Compatibilité requise : Architecture Arm v8a 64 bits<br />
+                                    Processeur sans PowerVR<br />
+                                    RAM : plus de 3 Go<br />
+                                    Système : Android 7.0 ou supérieur<br />
+                                    Espace de stockage : au moins 10 Go</p>
+                                <li><strong>Configuration recommandée</strong></li>
+                                <p>Processeur : Snapdragon 865, Kirin 820<br />
+                                    RAM : plus de 4 Go</p>
+                            </ul>
+                            <!-- iOS-->
+                            <ul class="system-active px-0" *ngIf="selectedSystem === 'iOS'">
+                                <li><strong>Espace de stockage : </strong></li>
+                                <p>au moins 20 Go</p>
+                                <li><strong>Système compatible : </strong></li>
+                                <p>iOS 9.0 et supérieur<br />
+                                    (Compatibilité manette Bluetooth : iOS 14 et supérieur)</p>
+                                <li><strong>Appareils recommandés :</strong></li>
+                                <p>iPhone 8 Plus, iPhone X, iPhone XS, iPhone XS Max, iPhone XR, iPhone 11, iPhone 11
+                                    Pro, iPhone 11 Pro Max, iPhone SE (2e génération), iPhone 12, iPhone 12 mini, iPhone
+                                    12 Pro, iPhone 12 Pro Max, iPhone 13, iPhone 13 mini, iPhone 13 Pro, iPhone 13 Pro
+                                    Max, iPad Air (3e génération), iPad mini (5e génération), iPad Pro (2e génération)
+                                    12,9 pouces, iPad Pro (2e génération) 10,5 pouces, iPad Pro (3e génération) 11
+                                    pouces, iPad Pro (3e génération) 12,9 pouces, iPad Pro (4e génération) 11 pouces,
+                                    iPad Pro (4e génération) 12,9 pouces, iPad Air (4e génération), iPad (8e
+                                    génération), iPad mini (6e génération), iPad (9e génération)</p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
