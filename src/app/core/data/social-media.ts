@@ -1,27 +1,33 @@
 export const SocialLists: SocialLists[] = [
     {
         classIcon: 'gg-facebook',
-        iconName: 'Facebook'
+        iconName: 'Facebook',
+        path: 'https://www.facebook.com/Genshinimpact.fr/'
     },
     {
         classIcon: 'bi-twitter',
-        iconName: 'Twitter'
+        iconName: 'Twitter',
+        path: 'https://twitter.com/genshinimpactfr'
     },
     {
         classIcon: 'bi-youtube',
-        iconName: 'Youtube'
+        iconName: 'Youtube',
+        path: 'https://www.youtube.com/c/GenshinImpact'
     },
     {
         classIcon: 'bi-instagram',
-        iconName: 'Instagram'
+        iconName: 'Instagram',
+        path: 'https://www.instagram.com/genshinimpact/'
     },
     {
         classIcon: 'bi-discord',
-        iconName: 'Discord'
+        iconName: 'Discord',
+        path: 'https://discord.com/invite/genshinimpact'
     },
     {
         classIcon: 'bi-reddit',
-        iconName: 'Reddit'
+        iconName: 'Reddit',
+        path: 'https://www.reddit.com/r/Genshin_Impact'
     },
 ];
 
@@ -46,6 +52,7 @@ export const SocialConnexion: SocialListsConnexion[] = [
 
 export interface SocialLists {
     classIcon: string;
+    path: string;
     iconName?: string;
 }
 

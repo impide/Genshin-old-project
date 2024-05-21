@@ -45,16 +45,8 @@
     <!-- Profile -->
     <div class="position-relative h-100 col-xxl-1 profile d-none d-xxl-flex justify-content-end align-items-center me-3"
         (click)="openDialog()">
-        <div class="connexion me-3" *ngIf="!(isAuth$|async)">
-            <span>{{ abbvrEmail() }}</span>
-        </div>
-        <div class="connexion connexion-in me-3" *ngIf="(isAuth$|async)">
-            <span>{{ abbvrEmail() }}</span>
-            <div class="login_dropdown_menu">
-                <a [routerLink]="['/main-profile/', (userId$|async)._id]" target="_blank">Mon compte</a>
-                <span class="mx-3">|</span>
-                <a href="#" (click)="onLogout()">Quitter</a>
-            </div>
+        <div class="connexion me-3">
+            <span>Connexion</span>
         </div>
         <div class="avatar">
             <img src="../../../assets/image/main-navbar/avatar.png" alt="Avatar">

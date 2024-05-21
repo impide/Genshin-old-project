@@ -3,7 +3,7 @@
     <div class="social-media">
         <ul class="d-flex justify-content-center justify-content-xl-start align-items-center mb-0 p-0 ps-xl-5">
             <li class="d-flex align-items-center" *ngFor="let social of socialLists">
-                <a><i class="bi {{social.classIcon}} mx-3"></i></a>
+                <a [href]="social.path" target="_blank"><i class="bi {{social.classIcon}} mx-3"></i></a>
             </li>
         </ul>
     </div>

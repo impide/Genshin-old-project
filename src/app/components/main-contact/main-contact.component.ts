@@ -14,5 +14,4 @@ export class MainContactComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

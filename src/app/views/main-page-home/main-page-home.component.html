@@ -22,17 +22,17 @@
                     <div class="info-app-store">
                         <ul class="d-flex justify-content-center px-0">
                             <li class="mx-2 d-none d-xl-block" *ngFor="let store of stores">
-                                <img [src]="store.src" [alt]="store.title">
+                                <img [src]="store.src" [alt]="store.title" (click)="externalLink(store.link)">
                             </li>
                             <div class="responsive-store d-flex d-xl-none justify-content-between">
                                 <div class="firsts-stores mx-2">
                                     <li class="my-3" *ngFor="let store of stores.slice(0,2)">
-                                        <img [src]="store.src" [alt]="store.title">
+                                        <img [src]="store.src" [alt]="store.title" (click)="externalLink(store.link)">
                                     </li>
                                 </div>
                                 <div class="seconds-store mx-2">
                                     <li class="my-3" *ngFor="let store of stores.slice(2,4)">
-                                        <img [src]="store.src" [alt]="store.title">
+                                        <img [src]="store.src" [alt]="store.title" (click)="externalLink(store.link)">
                                     </li>
                                 </div>
                             </div>
@@ -116,8 +116,8 @@
                         <img class="star-background" src="../../../assets/image/main-page-home/star.png" alt="Star">
                         <img class="border-active" src="../../../assets/image/main-page-home/border.png" alt="Border">
                         <img class="character-background" [src]="location.character" alt="Character">
-                        <span class="layer w-100 h-100"></span>
-                        <span class="title text-white">{{ location.title }}</span>
+                        <span class="layer w-100 h-100" [routerLink]="[location.path]"></span>
+                        <span class="title text-white" [routerLink]="[location.path]">{{ location.title }}</span>
                     </li>
                 </ul>
                 <ul class="coming-soon p-0 mb-0">

@@ -7,6 +7,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { NgxMasonryModule } from 'ngx-masonry';
 
 import { AppComponent } from './app.component';
 import { MainNavbarComponent } from './components/main-navbar/main-navbar.component';
@@ -24,8 +25,8 @@ import { LiyueComponent } from './views/characters/liyue/liyue.component';
 import { InazumaComponent } from './views/characters/inazuma/inazuma.component';
 import { ComingSoonComponent } from './views/characters/coming-soon/coming-soon.component';
 import { MainRegisterComponent } from './components/main-register/main-register.component';
-import { SignupComponent } from './components/main-register/signup/signup.component';
-import { LoginComponent } from './components/main-register/login/login.component';
+import { MainProfileComponent } from './components/main-profile/main-profile.component';
+import { MainPageDownloadComponent } from './views/main-page-download/main-page-download.component';
 
 @NgModule({
   declarations: [
@@ -45,8 +46,8 @@ import { LoginComponent } from './components/main-register/login/login.component
     InazumaComponent,
     ComingSoonComponent,
     MainRegisterComponent,
-    SignupComponent,
-    LoginComponent
+    MainProfileComponent,
+    MainPageDownloadComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +57,8 @@ import { LoginComponent } from './components/main-register/login/login.component
     MatCheckboxModule,
     HttpClientModule,
     FormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgxMasonryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -39,5 +39,9 @@ export class MainPageHomeComponent implements OnInit {
         this.sidebar_variable = false;
       }
     }
+
+    externalLink(link: string): Window {
+      return window.open(link, '_blank');
+    }
 }
 

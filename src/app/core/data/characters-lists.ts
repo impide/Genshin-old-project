@@ -174,12 +174,12 @@ export const MondstadtCharacters: Characters[] = [
 
 export const LiyueCharacters: Characters[] = [
     {
-        charAvatar: '../../../assets/image/characters/avatar-xiao.png',
-        charImage: '../../../assets/image/characters/character-xiao.png',
-        charImageName: '../../../assets/image/characters/xiao.png',
-        charName: 'Xiao',
-        voiceName: 'CV : Yoshitsugu Matsuoka',
-        charIntro: 'Un des puissants Adeptes éclairés de Liyue, aussi connu sous le nom de « Yaksha gardien ». Bien qu\'il ait l\'apparence d\'un jeune garçon, on retrouve de nombreuses légendes à son sujet dans des ouvrages littéraires vieux de plusieurs milliers d\'années. Son plat préféré est le tofu aux amandes de l\'Auberge Wangshu. Il apprécie particulièrement ce mets parce qu\'il a le goût d\'un beau rêve qu\'il a jadis dévoré.',
+        charAvatar: '../../../assets/image/characters/avatar-tetefrais.jpg',
+        charImage: '../../../assets/image/characters/tetefrais.png',
+        charImageName: '../../../assets/image/characters/tetefrais-name.png',
+        charName: 'Tête frais',
+        voiceName: 'CV : Shaki-rat',
+        charIntro: 'Le Gros Tête frais, aussi appelé le Gros Pétrel Malgache, vis généralement dans la caz t\'a pas li et mange la plupart du temps ek l\argent son mâle blanc. De nature violente, elle fini presque toujour ses phrases par "Et ferme out ki". N\a pas bonne réputation dans le quartier, à éviter.',
         charIndex: 0
     }
 ]

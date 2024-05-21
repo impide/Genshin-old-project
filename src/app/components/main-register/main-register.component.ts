@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { SocialConnexion, SocialListsConnexion } from 'src/app/core/data/social-media';
-import { AuthService } from 'src/app/core/service/auth.service';
 import { SnackBarService } from 'src/app/core/service/snackbar.service';
 
 @Component({
@@ -18,11 +18,10 @@ export class MainRegisterComponent implements OnInit {
   constructor(
     public dialog: MatDialog,
     public snackbar: SnackBarService,
-    private authService: AuthService
+    public router: Router
   ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onCloseModal():void {
     this.dialog.closeAll();
@@ -33,9 +32,7 @@ export class MainRegisterComponent implements OnInit {
   }
 
   onLogin(form: NgForm) {
-    const email = form.value.email;
-    const password = form.value.password;
-    this.authService.login(email, password);
+    this.snackbar.openOfficialLink();
   }
 
   onSignup(form: NgForm) {
@@ -51,7 +48,7 @@ export class MainRegisterComponent implements OnInit {
     const email = form.value.email;
     const password = form.value.password;
     // Execute Ath Service
-    this.authService.signup(email, password);
+    console.log(email, password);
     // Change Path & Reset Form
     this.currentPath = 'Login';
     form.reset();

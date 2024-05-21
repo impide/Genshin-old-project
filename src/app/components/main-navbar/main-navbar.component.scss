@@ -61,12 +61,19 @@ nav {
         a {
             padding-left: 20px;
             font-size: 15px;
+            cursor: not-allowed;
         }
         a:hover {
             background: #343031;
             text-shadow: none;
         }
     }
+}
+
+.section-title ul li:nth-of-type(5) a,
+.section-title ul li:nth-of-type(6) a,
+.section-title ul li:nth-of-type(7) a {
+    cursor: not-allowed;
 }
 
 // Profile

@@ -58,6 +58,10 @@
                 opacity: 1;
             }
         }
+
+        .info-app-store ul li:nth-of-type(4) img {
+            cursor: not-allowed;
+        }
     }
 }
 
@@ -197,7 +201,6 @@
 
             img {
                 transition: 0.4s ease-out;
-                transform: translateX(-200px);
                 z-index: 8;
             }
 
@@ -226,6 +229,7 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 font-size: 36px;
+                cursor: pointer;
                 z-index: 11;
             }
 
@@ -267,7 +271,7 @@
         }
 
         li:hover img:not(.star-background, .border-active, img.character-background) {
-            transform: translateX(-200px) scale(1.05);
+            transform: scale(1.05);
         }
     }
 
